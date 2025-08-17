@@ -1,0 +1,14 @@
+diff --git a/lib/Lemonldap/NG/Handler/Lib/PSGI.pm b/lib/Lemonldap/NG/Handler/Lib/PSGI.pm
+index e9d2e2a10..1a7de9eb8 100644
+--- a/lib/Lemonldap/NG/Handler/Lib/PSGI.pm
++++ b/lib/Lemonldap/NG/Handler/Lib/PSGI.pm
+@@ -24,7 +24,7 @@ sub init {
+         or ( $args->{protection} and $args->{protection} eq 'none' ) )
+     {
+         $self->error(
+-            "Unable to protect this server ($Lemonldap::NG::Common::Conf::msg)"
++            "Unable to protect this server ($Lemonldap::NG::Common::Conf::msg, $self)"
+         );
+         return 0;
+     }
+

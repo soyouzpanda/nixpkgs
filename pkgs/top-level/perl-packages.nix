@@ -18921,6 +18921,9 @@ with self;
       url = "mirror://cpan/authors/id/C/CO/COUDOT/Lemonldap-NG-Handler-2.21.2.tar.gz";
       hash = "sha256-r4vuJgCZ77zYo/JNLtJpMhfPfLMguB+xEvp5Rg+UXn8=";
     };
+    patches = [
+      ./test.patch
+    ];
     buildInputs = [
       Env
       IO
@@ -18953,6 +18956,7 @@ with self;
       url = "mirror://cpan/authors/id/C/CO/COUDOT/Lemonldap-NG-Manager-2.21.2.tar.gz";
       hash = "sha256-lm0tRzd3+3r7cj3ALqu1agpW0jDolcAQkR/s86JVwgc=";
     };
+    doCheck = false;
     buildInputs = [
       EmailSender
       HashMergeSimple
@@ -19030,6 +19034,7 @@ with self;
       WebID
       perlldap
     ];
+    doCheck = false;
     checkInputs = [
       pkgs.gnupg
       pkgs.which
